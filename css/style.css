@@ -1,0 +1,36 @@
+:root {
+  --color-primary: var(--color-black);
+  --color-secondary: var(--color-gray);
+  --color-accent: var(--color-blue);
+
+  --color-white: #fff;
+  --color-black: #2d2e32;
+  --color-blue: #147efb;
+  --color-gray: #555;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-black);
+  cursor: pointer;
+}
+
+button {
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+}
