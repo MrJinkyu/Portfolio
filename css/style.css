@@ -7,6 +7,7 @@
   --color-black: #2d2e32;
   --color-blue: #147efb;
   --color-gray: #555;
+  --color-light-gray: #8e8e8e;
 }
 
 * {
@@ -33,4 +34,40 @@ button {
   outline: 0;
   border: 0;
   cursor: pointer;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 25px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-white);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
+}
+
+.header_logo_title {
+  font-size: 1.3rem;
+}
+
+.header_menu {
+  display: flex;
+  gap: 4px;
+}
+
+.header_menu_item {
+  padding: 8px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.header_menu_item:hover {
+  color: var(--color-accent);
+}
+
+.header_menu_item.selected {
+  color: var(--color-accent);
 }
