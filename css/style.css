@@ -39,7 +39,7 @@ button {
 .section {
   width: 100%;
   height: 100vh;
-  padding: 4rem;
+  padding: 6rem 0 4rem;
   text-align: center;
 }
 
@@ -190,4 +190,78 @@ button {
 .info_item_description {
   font-size: 0.8rem;
   color: var(--color-gray);
+}
+
+/* Skills */
+
+.skills_box {
+  margin: 2.5rem auto;
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  align-items: center;
+}
+
+.box_left {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box_images {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.box_img_text {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: rotate 12s linear infinite;
+}
+
+.box_img_avatar {
+  width: 50%;
+  height: 50%;
+}
+
+.box_right {
+  width: 70%;
+}
+
+.bar {
+  padding: 0.5rem;
+}
+
+.bar_bg {
+  width: 100%;
+  height: 30px;
+  background-color: lightgray;
+}
+
+.bar_value {
+  height: 30px;
+  background-color: #1160bd;
+}
+
+.bar_name {
+  width: 150px;
+  height: 30px;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  font-size: 1rem;
+  line-height: 30px;
 }
