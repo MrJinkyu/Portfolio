@@ -137,7 +137,7 @@ button {
   margin-bottom: 2rem;
 }
 
-.home_contact {
+.contact_box {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -356,4 +356,20 @@ button {
 .project_btn:hover {
   color: var(--color-white);
   background-color: var(--color-accent);
+}
+
+/* Contact */
+#contact {
+  width: 100%;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.contact_mail {
+  margin-top: 1rem;
+  color: gray;
+}
+
+.contact_right {
+  color: gray;
 }
