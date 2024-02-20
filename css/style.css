@@ -37,6 +37,7 @@ button {
 
 /* Common */
 .section {
+  position: relative;
   width: 100%;
   height: 100vh;
   padding: 6rem 0 4rem;
@@ -94,6 +95,7 @@ button {
 
 /* Home */
 #home {
+  position: relative;
   width: 100%;
   height: 100vh;
   padding: 7rem 1rem 5rem;
@@ -360,8 +362,9 @@ button {
 
 /* Contact */
 #contact {
+  position: relative;
   width: 100%;
-  padding: 4rem 0;
+  padding: 6rem 0 4rem;
   text-align: center;
 }
 
@@ -372,4 +375,43 @@ button {
 
 .contact_right {
   color: gray;
+}
+
+/* Arrow Button */
+.arrow_btn {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  box-shadow: rgba(149, 160, 165, 0.2) 0px 8px 24px;
+}
+
+.arrow_icon {
+  font-size: 1.5rem;
+  color: var(--color-secondary);
+}
+
+.arrow_btn_up {
+  box-shadow: rgba(149, 160, 165, 0.2) 0px 8px 24px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+html {
+  scroll-behavior: smooth;
 }
