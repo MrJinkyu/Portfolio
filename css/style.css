@@ -195,6 +195,30 @@ button {
   color: var(--color-gray);
 }
 
+@keyframes flow {
+  0% {
+    left: 0%;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    left: 90%;
+    opacity: 0;
+  }
+}
+
+.about_man {
+  position: absolute;
+  left: 0%;
+  bottom: 140px;
+  animation: flow linear 20s infinite;
+}
+
 /* Skills */
 
 .skills_box {
