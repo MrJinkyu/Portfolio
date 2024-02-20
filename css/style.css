@@ -439,3 +439,103 @@ button {
 html {
   scroll-behavior: smooth;
 }
+
+/* Media Query */
+@media (max-width: 1280px) {
+  .section {
+    height: 100%;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .home_title {
+    font-size: 2.5rem;
+  }
+  .home_description {
+    font-size: 1rem;
+  }
+
+  .info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info_item {
+    height: 225px;
+  }
+
+  .about_man {
+    display: none;
+  }
+
+  .skills_box {
+    flex-direction: column;
+    margin: 1rem auto;
+  }
+
+  .box_left {
+    width: 100%;
+    margin: 0.5rem auto 1rem;
+  }
+
+  .project_list {
+    flex-direction: column;
+    margin: 2.5rem 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 5rem 15px;
+  }
+
+  .description {
+    font-size: 0.8rem;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: start;
+    padding: 15px;
+  }
+
+  .header_menu {
+    /* display: none; */
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .header_nav {
+    width: 100%;
+  }
+
+  #home {
+    padding: 7rem 15px 5rem;
+  }
+
+  .home_avatar {
+    width: 280px;
+    height: 280px;
+  }
+
+  .home_title {
+    font-size: 2rem;
+  }
+
+  .bar_name {
+    width: 100px;
+    font-size: 0.8rem;
+  }
+
+  .project_item {
+    width: 100%;
+  }
+}
