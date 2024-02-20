@@ -66,6 +66,7 @@ button {
   align-items: center;
   background-color: var(--color-white);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
+  z-index: 100;
 }
 
 .header_logo_title {
@@ -264,4 +265,95 @@ button {
   color: var(--color-white);
   font-size: 1rem;
   line-height: 30px;
+}
+
+/* Projects */
+
+#projects {
+  background-color: whitesmoke;
+}
+
+.project_category {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.category_item {
+  background-color: transparent;
+  font-size: 1.2rem;
+  margin: 0 1rem;
+  color: var(--color-secondary);
+  width: 150px;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+}
+
+.category_item:hover {
+  color: var(--color-accent);
+}
+
+.category_item.selected {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+.project_list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2.5rem 0;
+}
+
+.project_item {
+  width: 390px;
+  height: 240px;
+  position: relative;
+}
+
+.project_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project_metadata {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 250ms ease-in-out;
+}
+
+.project_metadata:hover {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.project_skil {
+  color: var(--color-accent);
+  font-weight: 300;
+}
+
+.project_btn {
+  width: 170px;
+  border: 2px solid var(--color-accent);
+  background-color: var(--color-white);
+  margin: 2rem auto 0;
+  padding: 8px 0;
+  transition: all 150ms ease-in-out;
+}
+
+.project_btn:hover {
+  color: var(--color-white);
+  background-color: var(--color-accent);
 }
