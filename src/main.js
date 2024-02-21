@@ -1,6 +1,8 @@
 "use strict";
 const header = document.querySelector(".header");
 const headerHeight = header.getBoundingClientRect().height;
+const home = document.querySelector("#home");
+const homeHeight = home.getBoundingClientRect().height;
 
 document.addEventListener("scroll", () => {
   if (window.scrollY > headerHeight) {
@@ -8,4 +10,8 @@ document.addEventListener("scroll", () => {
   } else {
     header.classList.remove("dark");
   }
+});
+
+document.addEventListener("scroll", () => {
+  home.style.opacity = 1 - window.scrollY / homeHeight;
 });
