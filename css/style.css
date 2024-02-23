@@ -82,7 +82,7 @@ button {
 .section {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   padding: 6rem 0 4rem;
   text-align: center;
 }
@@ -348,30 +348,47 @@ button {
   background-color: whitesmoke;
 }
 
-.project_category {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.filters-wrap {
+  position: relative;
+  display: inline-block;
   margin-top: 2.5rem;
 }
 
-.category_item {
+.project_filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter_item {
   background-color: transparent;
   font-size: 1.2rem;
   margin: 0 1rem;
   color: var(--color-secondary);
   width: 150px;
+  height: 28px;
   cursor: pointer;
-  transition: all 150ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  z-index: 1;
 }
 
-.category_item:hover {
+.filter_item:hover {
   color: var(--color-accent);
 }
 
-.category_item.selected {
-  background-color: var(--color-accent);
+.filter_item.selected {
   color: var(--color-white);
+}
+
+.selected-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-accent);
+  margin: 0 1rem;
+  width: 150px;
+  height: 28px;
+  transition: all 300ms ease-in-out;
 }
 
 .project_list {
@@ -379,6 +396,12 @@ button {
   align-items: center;
   justify-content: center;
   margin: 2.5rem 0;
+  transition: all 300ms ease-in-out;
+}
+
+.project_list.out {
+  opacity: 0;
+  transform: scale(0.95) translateY(10px);
 }
 
 .project_item {
@@ -491,6 +514,9 @@ html {
 
 /* Media Query */
 @media (max-width: 1280px) {
+  .section {
+    height: 100%;
+  }
   .info {
     flex-direction: column;
     align-items: center;

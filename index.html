@@ -192,13 +192,16 @@
           <p>저는 사용하기 쉽고 직관적인 UX/UI를 선호합니다</p>
           <p>가장 최근에 작업한 메인 프로젝트는 삼성전자 웹 페이지입니다</p>
         </div>
-        <ul class="project_category">
-          <li class="category_item selected">All</li>
-          <li class="category_item">Personal</li>
-          <li class="category_item">Team</li>
-        </ul>
+        <div class="filters-wrap">
+          <ul class="project_filters">
+            <li class="filter_item selected" data-filter="all">All</li>
+            <li class="filter_item" data-filter="personal">Personal</li>
+            <li class="filter_item" data-filter="team">Team</li>
+          </ul>
+          <div class="selected-bar"></div>
+        </div>
         <ul class="project_list">
-          <li class="project_item">
+          <li class="project_item" data-category="personal">
             <img class="project_img" src="/images/samsung.png" alt="project1" />
             <div class="project_metadata">
               <h3 class="project_title">삼성전자 웹 페이지</h3>
@@ -206,7 +209,7 @@
               <button class="project_btn">더 알아보기</button>
             </div>
           </li>
-          <li class="project_item">
+          <li class="project_item" data-category="personal">
             <img class="project_img" src="/images/ott.png" alt="project2" />
             <div class="project_metadata">
               <h3 class="project_title">OTT 영화 사이트</h3>
@@ -214,7 +217,7 @@
               <button class="project_btn">더 알아보기</button>
             </div>
           </li>
-          <li class="project_item">
+          <li class="project_item" data-category="team">
             <img class="project_img" src="/images/mbti.png" alt="project3" />
             <div class="project_metadata">
               <h3 class="project_title">MBTI 포털 서비스</h3>
