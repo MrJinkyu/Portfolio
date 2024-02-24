@@ -112,26 +112,27 @@ button {
 }
 
 .header_menu_item {
-  padding: 8px 16px;
+  padding: 8px 32px;
   font-size: 1rem;
   font-weight: 600;
   display: block;
   color: var(--color-white);
+  position: relative;
 }
 
-/* .header_menu_item::after {
+.header_menu_item::after {
   content: "";
   display: block;
-  position: relative;
-  left: 0%;
-  top: 0%;
-  width: 5px;
-  height: 100%;
-  background-color: var(--color-white);
-} */
+  position: absolute;
+  right: 0%;
+  top: 25%;
+  width: 2px;
+  height: 60%;
+  background-color: var(--color-secondary);
+}
 
-.header_menu_item:hover {
-  color: var(--color-accent);
+.header_menu_item[href="#contact"]::after {
+  display: none;
 }
 
 .header_menu_item.selected {
