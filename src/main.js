@@ -12,10 +12,6 @@ document.addEventListener("scroll", () => {
   }
 });
 
-document.addEventListener("scroll", () => {
-  home.style.opacity = 1 - window.scrollY / homeHeight;
-});
-
 const navbarMenu = document.querySelector(".header_menu");
 const toggleBtn = document.querySelector(".header_toggle");
 toggleBtn.addEventListener("click", () => {

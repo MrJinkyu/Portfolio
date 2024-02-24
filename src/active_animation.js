@@ -14,9 +14,7 @@ function observerCallback(entries) {
     if (entry.isIntersecting) {
       switch (entry.target.id) {
         case "home":
-          entry.target.classList.add("active");
-          entry.target.querySelector(".sun").classList.add("active");
-          entry.target.querySelector(".home_avatar").classList.add("active");
+          entry.target.querySelector(".door").classList.add("active");
           break;
         case "about":
           entry.target
@@ -34,9 +32,7 @@ function observerCallback(entries) {
     } else {
       switch (entry.target.id) {
         case "home":
-          entry.target.classList.remove("active");
-          entry.target.querySelector(".sun").classList.remove("active");
-          entry.target.querySelector(".home_avatar").classList.remove("active");
+          entry.target.querySelector(".door").classList.remove("active");
           break;
         case "about":
           entry.target
