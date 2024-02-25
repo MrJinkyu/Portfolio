@@ -66,11 +66,16 @@
         </div>
         <div class="home_text-box">
           <div class="home_greetings">안녕하세요 저는 ⎯</div>
-          <div class="home_name"><span class="home_name-value">JK Kim 👀</span><span class="home_nickname">생활코더 :</span></div>
+          <div class="home_name">
+            <span class="home_name-value">JK Kim 👀</span
+            ><span class="home_nickname">생활코더 :</span>
+          </div>
           <div class="home_job">
             <div class="home_job-left">Front End</div>
             <div class="home_job-right">
-              <p class="home_job-right_top">{밤 ⎯ 낮으로 코딩에 몰두하는 사람}</p>
+              <p class="home_job-right_top">
+                {밤 ⎯ 낮으로 코딩에 몰두하는 사람}
+              </p>
               <p class="home_job-right_bottom">Developer</p>
             </div>
           </div>
@@ -199,7 +204,9 @@
             <div class="project_metadata">
               <h3 class="project_title">삼성전자 웹 페이지</h3>
               <p class="project_skil">React / Firebase</p>
-              <button class="project_btn">더 알아보기</button>
+              <button class="project_btn" data-title="samsung">
+                더 알아보기
+              </button>
             </div>
           </li>
           <li class="project_item" data-category="personal">
@@ -207,7 +214,7 @@
             <div class="project_metadata">
               <h3 class="project_title">OTT 영화 사이트</h3>
               <p class="project_skil">Javascript / React</p>
-              <button class="project_btn">더 알아보기</button>
+              <button class="project_btn" data-title="ott">더 알아보기</button>
             </div>
           </li>
           <li class="project_item" data-category="team">
@@ -215,7 +222,7 @@
             <div class="project_metadata">
               <h3 class="project_title">MBTI 포털 서비스</h3>
               <p class="project_skil">Typescript / React</p>
-              <button class="project_btn">더 알아보기</button>
+              <button class="project_btn" data-title="mbti">더 알아보기</button>
             </div>
           </li>
         </ul>
@@ -223,64 +230,68 @@
     </main>
     <div class="modal-wrap">
       <div class="modal">
-        <span title="close button" class="modal_close-btn">
-          <i class="fa-solid fa-xmark"></i>
-        </span>
+        <i class="fa-solid fa-xmark modal_close-btn" data-name="close"></i>
         <div class="modal_left-box">
           <img
-            src="/images/samsung.png"
-            alt="samsung project image"
+            src="/images/mbti.png"
+            alt="mbti project image"
             class="modal-img"
           />
           <h4 class="modal_title">
-            삼성전자 웹 페이지<span class="modal_category"
-              >Personal project</span
-            >
-          </h3>
+            MBTI 포털 서비스<span class="modal_category">Team project</span>
+          </h4>
           <div class="modal_link-box">
             <p class="link-title">배포링크</p>
             <a
               class="modal_link"
-              href="https://teal-mandazi-2a1254.netlify.app/"
+              href="https://are-you-t.vercel.app/"
               target="_blank"
-              >https://teal-mandazi-2a1254.netlify.app/</a
+              >https://are-you-t.vercel.app/</a
             >
           </div>
           <div class="modal_link-box">
             <p class="link-title">레파지토리</p>
             <a
               class="modal_link"
-              href="https://github.com/MrJinkyu/Enterprise-Web-Page"
+              href="https://github.com/are-you-T/client"
               target="_blank"
-              >https://github.com/MrJinkyu/Enterprise-Web-Page</a
+              >https://github.com/are-you-T/client</a
             >
           </div>
         </div>
         <div class="modal_right-box">
           <div class="right-box_content-wrap">
             <h5 class="modal_right_box-title">프로젝트 소개</h5>
-            <p class="box-title_content">삼성전자를 소개하고 제품을 판매하는 종합 플랫폼으로, 사용자 관점에서 자연스러운 흐름의 전자상거래 경험을 제공합니다.</p>
-            <p class="box-title_content">스스로 정했던 3주라는 프로젝트 마감기한 동안 완벽이 아닌 완성을 목표로 개발하였고, 프로젝트를 진행하며 경험치를 쌓아 기업에 도움이 되는 실력 있는 개발자가 되고 싶다는 마음으로 만들게 되었습니다.</p>
+            <p class="box-title_content">
+              사용자들이 자신의 성격 유형을 이해하고, 다른 유형의 사람들과
+              상호작용을 통해 이해할 수 있는 기회를 제공하는 MBTI 포털
+              서비스입니다.
+            </p>
           </div>
           <div class="right-box_content-wrap">
             <h5 class="modal_right_box-title">배운점</h5>
             <p class="box-title_content">
-              웹 개발자로서 기업형 웹 페이지를 구현하며 실제 기업 페이지에서 필요한 다양한 기능과 커머스에 대한 이해, 그리고 반응형 레이아웃을 경험할 수 있었습니다.
+              팀 프로젝트를 통해 TypeScript, Tailwind CSS, 그리고 Styled
+              Components와 같은 새로운 기술 스택을 사용해보았고, Discord 음성
+              채팅방을 활용하여 팀원들과 실시간으로 문제 상황을 공유하고 함께
+              해결 방법을 논의하며 문제를 해결하는 과정을 통해 협업 능력을
+              키웠습니다.
             </p>
           </div>
           <div class="right-box_content-wrap">
-            <h5 class="modal_right_box-title">구현 기능</h5>
+            <h5 class="modal_right_box-title">담당 기능</h5>
             <p class="box-title_content">
-              이미지 슬라이드 배너, 장바구니, 상품 추가, 결제 ui 연동, 챗봇
+              테스트 결과 페이지: 유형 별 컬러 매칭, 결과 데이터 시각화, 결과
+              페이지 공유
             </p>
           </div>
           <div class="right-box_content-wrap">
-            <h5 class="modal_right_box-title">기술 스택</h5>
+            <h5 class="modal_right_box-title">클라이언트 기술 스택</h5>
             <p class="box-title_content">
-              React, React Router, React Query, Cloudinary, Firebase, Swiper, Tosspayments, React Simple Chatbot
+              Tailwind CSS, Tailwind-styled-component, React, TypeScript
             </p>
           </div>
-      </div>
+        </div>
       </div>
     </div>
     <footer id="contact">
