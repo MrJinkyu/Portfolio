@@ -9,6 +9,14 @@
   --color-gray: #555;
 }
 
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -74,7 +82,10 @@ button {
   position: relative;
   width: 100%;
   height: 100vh;
-  padding: 6rem 0 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
@@ -95,7 +106,7 @@ button {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 25px 50px;
+  padding: 30px 50px;
   background-color: transparent;
   z-index: 99;
   display: flex;
@@ -103,7 +114,7 @@ button {
 }
 
 .header.dark {
-  background-color: black;
+  background-color: #fdfdfd;
 }
 
 .header_menu {
@@ -116,27 +127,29 @@ button {
   font-size: 1rem;
   font-weight: 600;
   display: block;
-  color: var(--color-white);
+  color: var(--color-black);
   position: relative;
 }
 
-.header_menu_item::after {
-  content: "";
-  display: block;
-  position: absolute;
-  right: 0%;
-  top: 25%;
-  width: 2px;
-  height: 60%;
-  background-color: var(--color-secondary);
-}
-
-.header_menu_item[href="#contact"]::after {
-  display: none;
+.header_menu_item:hover {
+  color: var(--color-accent);
 }
 
 .header_menu_item.selected {
   color: var(--color-accent);
+}
+
+.header_menu_item.selected::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  display: block;
+  background-color: var(--color-accent);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 10%);
+  border-radius: 50%;
+  bottom: 0%;
 }
 
 .header_toggle {
@@ -159,20 +172,13 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: black;
-  padding: 6rem 0 4rem;
-}
-
-.home_title {
-  font-size: 4rem;
-  color: var(--color-white);
-  transform: translateX(-350px);
-  font-weight: bold;
+  background-color: #fdfdfd;
+  padding: 9rem 0 4rem;
 }
 
 .standard {
-  width: 300px;
-  height: 400px;
+  width: 200px;
+  height: 300px;
   position: relative;
   transform-style: preserve-3d;
   transform: perspective(1500px);
@@ -180,12 +186,12 @@ button {
 }
 
 .door {
-  width: 300px;
-  height: 400px;
+  width: 200px;
+  height: 300px;
   position: absolute;
   top: 0;
   left: 0;
-  background-color: black;
+  background-color: #0b0b0b;
   transform-style: preserve-3d;
   transform-origin: left;
 }
@@ -194,24 +200,95 @@ button {
   content: "";
   width: 20px;
   height: 20px;
-  border: 2px solid gray;
   border-radius: 50%;
   position: absolute;
   top: 50%;
   right: 15px;
-  background-color: lightgray;
+  background-color: #fdfdfd;
 }
 
 .door.active {
   animation: open 4s ease-in-out 100ms infinite;
 }
 
-.home_description {
-  font-size: 2.5rem;
-  color: var(--color-white);
-  transform: translate(100px, 25px);
-  font-weight: bold;
+.home_text-box {
+  padding-top: 2rem;
+  transform: translateX(17%);
 }
+
+.home_greetings {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "Pretendard-Regular";
+}
+
+.home_name {
+  display: flex;
+  align-items: center;
+  transform: translate(-2.5%, -10%);
+}
+
+.home_name-value {
+  font-size: 70px;
+  font-weight: bold;
+  letter-spacing: -3px;
+  color: #0b0b0b;
+}
+
+.home_nickname {
+  display: inline-block;
+  width: 270px;
+  height: 60px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Pretendard-Regular";
+  line-height: 60px;
+  padding: 0 2rem;
+  margin-left: 1rem;
+  text-align: right;
+  color: #fdfdfd;
+  border-radius: 2rem;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 15%,
+    rgba(9, 209, 209, 1) 100%
+  );
+}
+
+.home_job {
+  display: flex;
+  transform: translate(-10%, -20%);
+}
+
+.home_job-left {
+  font-size: 70px;
+  font-weight: bold;
+  color: #02c0c0;
+  letter-spacing: -3px;
+}
+
+.home_job-right {
+  padding: 1rem 2rem;
+}
+
+.home_job-right_top {
+  font-size: 20px;
+  color: #0b0b0b;
+  font-weight: 600;
+  font-family: "Pretendard-Regular";
+}
+
+.home_job-right_bottom {
+  font-size: 70px;
+  line-height: 80px;
+  font-weight: bold;
+  -webkit-text-stroke: 2px #0b0b0b;
+  color: transparent;
+  letter-spacing: -3px;
+}
+
 /* About */
 .info {
   display: flex;
@@ -513,6 +590,7 @@ button {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 100;
+  display: none;
 }
 
 .modal {
