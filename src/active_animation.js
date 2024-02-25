@@ -17,9 +17,6 @@ function observerCallback(entries) {
           entry.target.querySelector(".door").classList.add("active");
           break;
         case "about":
-          entry.target
-            .querySelectorAll(".info_item")
-            .forEach((item) => item.classList.add("active"));
           break;
         case "skills":
           entry.target
@@ -35,9 +32,6 @@ function observerCallback(entries) {
           entry.target.querySelector(".door").classList.remove("active");
           break;
         case "about":
-          entry.target
-            .querySelectorAll(".info_item")
-            .forEach((item) => item.classList.remove("active"));
           break;
         case "skills":
           entry.target
