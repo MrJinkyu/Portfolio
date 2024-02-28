@@ -11,13 +11,3 @@ document.addEventListener("scroll", () => {
     header.classList.remove("dark");
   }
 });
-
-const navbarMenu = document.querySelector(".header_menu");
-const toggleBtn = document.querySelector(".header_toggle");
-toggleBtn.addEventListener("click", () => {
-  navbarMenu.classList.toggle("open");
-});
-
-navbarMenu.addEventListener("click", () => {
-  navbarMenu.classList.remove("open");
-});
