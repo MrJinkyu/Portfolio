@@ -84,7 +84,7 @@ button {
   position: relative;
   width: 100%;
   min-width: 1024px;
-  height: 100vh;
+  height: 100%;
   padding: 7rem 0 4rem;
   display: flex;
   flex-direction: column;
@@ -330,13 +330,17 @@ button {
 
 .info {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(10, 1fr);
+  grid-auto-rows: 220px 220px 110px 110px;
+  gap: 1.5rem;
   margin: 2.5rem 0;
+  grid-template-areas:
+    "a a b b b c c d d d"
+    "a a b b b e e e f f";
 }
 
 .info_item {
-  background-color: whitesmoke;
+  background-color: white;
   border-radius: 1rem;
   padding: 2rem;
   display: flex;
@@ -345,12 +349,51 @@ button {
   align-items: flex-end;
   transition: all 250ms ease-in-out;
   cursor: pointer;
-  width: 250px;
-  height: 200px;
+  position: relative;
+}
+
+.info_item_bg {
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  object-fit: contain;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+}
+
+.info_item:nth-child(1) {
+  grid-area: a;
+  background-color: #b2f1f1;
+}
+
+.info_item:nth-child(2) {
+  grid-area: b;
+  background-color: #e9e2ff;
+}
+
+.info_item:nth-child(3) {
+  grid-area: c;
+  background-color: var(--color-white);
+}
+
+.info_item:nth-child(4) {
+  grid-area: d;
+  background-color: lightgray;
+}
+
+.info_item:nth-child(5) {
+  grid-area: e;
+  background-color: var(--color-white);
+}
+
+.info_item:nth-child(6) {
+  grid-area: f;
+  background-color: lightgray;
 }
 
 .info_item:hover {
-  transform: translateY(-20px);
+  transform: translateY(-15px);
 }
 
 .info_item_title {
@@ -717,15 +760,6 @@ button {
 @media (max-width: 1280px) {
   .section {
     height: 100%;
-  }
-
-  .info {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .info_item {
-    height: 225px;
   }
 
   .skills_box {
