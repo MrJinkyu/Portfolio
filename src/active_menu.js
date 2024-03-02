@@ -7,7 +7,7 @@ const visibleSections = sectionIds.map(() => false);
 let selectedNavItem = navItems[0];
 
 const options = {
-  rootMargin: `-10% 0px 0px 0px`,
+  rootMargin: `-20% 0px 0px 0px`,
   threshold: [0, 0.98],
 };
 

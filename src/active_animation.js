@@ -23,6 +23,12 @@ function observerCallback(entries) {
             .querySelectorAll(".bar_value")
             .forEach((item) => item.classList.add("active"));
           break;
+        case "contact":
+          entry.target.querySelector(".contact_title").classList.add("active");
+          entry.target
+            .querySelectorAll(".contact_item")
+            .forEach((item) => item.classList.add("active"));
+          break;
         default:
           break;
       }
@@ -36,6 +42,14 @@ function observerCallback(entries) {
         case "skills":
           entry.target
             .querySelectorAll(".bar_value")
+            .forEach((item) => item.classList.remove("active"));
+          break;
+        case "contact":
+          entry.target
+            .querySelector(".contact_title")
+            .classList.remove("active");
+          entry.target
+            .querySelectorAll(".contact_item")
             .forEach((item) => item.classList.remove("active"));
           break;
         default:
