@@ -1,46 +1,34 @@
-const filters = document.querySelector(".project_filters");
-const projects = document.querySelectorAll(".project_item");
-const projectList = document.querySelector(".project_list");
+const thumbnails = document.querySelectorAll(".project_img");
 
-filters.addEventListener("click", (e) => {
-  const filter = e.target.dataset.filter;
-  if (filter == null) {
-    return;
-  }
-  handleSelectedFilter(e.target);
-  handleMoveSelectedBar(filter);
-  handleProjectsFilter(filter);
+thumbnails.forEach((thumbnail) => {
+  thumbnail.addEventListener("mouseover", () => {
+    switch (thumbnail.alt) {
+      case "samsung_thumbnail":
+        thumbnail.src = "/images/samsung_play.gif";
+        break;
+      case "ott_thumbnail":
+        thumbnail.src = "/images/ott_play.gif";
+        break;
+      case "mbti_thumbnail":
+        thumbnail.src = "/images/mbti_play.gif";
+        break;
+      default:
+        break;
+    }
+  });
+  thumbnail.addEventListener("mouseleave", () => {
+    switch (thumbnail.alt) {
+      case "samsung_thumbnail":
+        thumbnail.src = "/images/samsung_thumbnail.png";
+        break;
+      case "ott_thumbnail":
+        thumbnail.src = "/images/ott_thumbnail.png";
+        break;
+      case "mbti_thumbnail":
+        thumbnail.src = "/images/mbti_thumbnail.png";
+        break;
+      default:
+        break;
+    }
+  });
 });
-
-function handleSelectedFilter(target) {
-  const current = document.querySelector(".filter_item.selected");
-  current.classList.remove("selected");
-  target.classList.add("selected");
-}
-
-function handleMoveSelectedBar(filter) {
-  const selectedBar = document.querySelector(".selected-bar");
-
-  if (filter === "all") {
-    selectedBar.style.transform = "translateX(0px)";
-  } else if (filter === "personal") {
-    selectedBar.style.transform = "translateX(182px)";
-  } else if (filter === "team") {
-    selectedBar.style.transform = "translateX(364px)";
-  }
-}
-
-function handleProjectsFilter(filter) {
-  projectList.classList.add("out");
-
-  setTimeout(() => {
-    projects.forEach((project) => {
-      if (filter === "all" || project.dataset.category === filter) {
-        project.style.display = "block";
-      } else {
-        project.style.display = "none";
-      }
-    });
-    projectList.classList.remove("out");
-  }, 300);
-}

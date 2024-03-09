@@ -381,7 +381,7 @@ button {
 .about_description {
   font-size: 20px;
   font-weight: 400;
-  color: #232323;
+  color: #6d6d6d;
   font-family: "Pretendard";
 }
 
@@ -390,7 +390,7 @@ button {
   font-size: 18px;
   font-weight: 400;
   color: #a0a0a0;
-  font-family: "Pretendard-Regular";
+  font-family: "Pretendard";
 }
 
 .info {
@@ -478,9 +478,11 @@ button {
 }
 
 .info_item_place {
+  font-family: "Pretendard";
   transform: translate(10px, 10px);
-  font-size: 0.8rem;
-  color: #0b0b0b;
+  font-size: 13px;
+  font-weight: 500;
+  color: #232323;
 }
 
 /* Skills */
@@ -490,7 +492,7 @@ button {
   min-width: 1024px;
   height: 100%;
   padding: 7rem 0 4rem;
-  background: black;
+  background: #0b0b0b;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -505,20 +507,24 @@ button {
 }
 
 .skills-right {
-  margin-left: 50px;
+  padding-left: 50px;
 }
 
 .skills_title {
   font-family: "Pretendard";
-  font-weight: 500;
+  font-weight: 400;
   color: #fdfdfd;
   font-size: 50px;
   text-align: left;
 }
 
 .skills_title em {
-  font-weight: 600;
+  font-weight: 700;
   font-style: normal;
+}
+
+.skills_title_icon {
+  font-size: 42px;
 }
 
 .skills_title em:nth-of-type(2) {
@@ -531,22 +537,22 @@ button {
 
 .skills_description {
   font-family: "Pretendard";
-  font-weight: 500;
-  font-size: 20px;
-  color: #f6f6f6;
+  font-weight: 400;
+  font-size: 18px;
+  color: #eaeaea;
   text-align: left;
-  margin: 2rem 0 4rem;
+  margin: 1rem 0 4rem;
 }
 
 .skills_link {
   font-family: "Pretendard";
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   color: #1ac6c6;
-  border: 2px solid #1ac6c6;
+  border: 3px solid #1ac6c6;
   background-color: transparent;
   border-radius: 2rem;
-  width: 400px;
+  width: 350px;
   height: 50px;
   transition: all 250ms ease-in-out;
   display: flex;
@@ -556,22 +562,24 @@ button {
 
 .skills_link i {
   margin-left: 0.5rem;
+  font-size: 14px;
 }
 
 .skills_link:hover {
+  border-color: #0b0b0b;
   color: #fdfdfd;
-  background: rgb(178, 241, 241);
+  background: rgb(9, 209, 209);
   background: linear-gradient(
     90deg,
-    rgba(178, 241, 241, 1) 50%,
-    rgba(2, 192, 192, 1) 100%
+    rgba(9, 209, 209, 1) 45%,
+    rgba(178, 241, 241, 1) 100%
   );
 }
 
 .skills-right_header {
   font-size: 12.8px;
-  font-weight: 500;
-  color: #f9f9f9;
+  font-weight: 300;
+  color: #e3e3e3;
   padding-left: 12px;
   position: relative;
 }
@@ -580,12 +588,12 @@ button {
   display: block;
   content: "";
   position: absolute;
-  top: 7px;
+  top: 6px;
   left: 0;
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background-color: #09d1d1;
+  background-color: #b2f1f1;
 }
 
 .skills-right_item {
@@ -608,7 +616,7 @@ button {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-color: black;
+  background: #0b0b0b;
   position: absolute;
   bottom: 0%;
   left: 50%;
@@ -627,143 +635,144 @@ button {
   position: relative;
   width: 100%;
   min-width: 1024px;
-  height: 100vh;
+  height: 100%;
   padding: 7rem 0 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background-color: white;
+  background-color: #fdfdfd;
 }
 
-.projects-title {
+.projects_title {
   font-size: 24px;
   font-weight: 700;
   font-family: "Pretendard";
-  color: #0b0b0b;
+  color: #414141;
   margin-bottom: 1rem;
 }
 
-.project-description {
+.projects_description {
   font-size: 20px;
   font-weight: 400;
-  color: #232323;
+  color: #6d6d6d;
   font-family: "Pretendard";
-}
-
-.filters-wrap {
-  position: relative;
-  display: inline-block;
-  margin-top: 2.5rem;
-}
-
-.project_filters {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.filter_item {
-  background-color: transparent;
-  font-size: 1.2rem;
-  margin: 0 1rem;
-  color: var(--color-black);
-  width: 150px;
-  height: 28px;
-  cursor: pointer;
-  transition: all 300ms ease-in-out;
-  z-index: 1;
-}
-
-.filter_item:hover {
-  color: var(--color-accent);
-}
-
-.filter_item.selected {
-  color: var(--color-white);
-}
-
-.selected-bar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: var(--color-accent);
-  margin: 0 1rem;
-  width: 150px;
-  height: 28px;
-  transition: all 300ms ease-in-out;
 }
 
 .project_list {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin: 2.5rem 0;
-  transition: all 300ms ease-in-out;
-}
-
-.project_list.out {
-  opacity: 0;
-  transform: scale(0.95) translateY(10px);
 }
 
 .project_item {
-  width: 400px;
-  height: 240px;
-  position: relative;
+  width: 1028px;
+  height: 330px;
+  display: flex;
+  margin: 3rem 0;
 }
 
-.project_img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.project_item:nth-child(2) {
+  flex-direction: row-reverse;
 }
 
 .project_metadata {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  width: 40%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  background-color: var(--color-white);
+  justify-content: flex-end;
+  align-items: flex-start;
+  background-color: transparent;
   color: var(--color-primary);
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: all 250ms ease-in-out;
 }
 
-.project_metadata:hover {
-  opacity: 1;
-  transform: translateY(0px);
+.project_item:nth-child(2) .project_metadata {
+  padding-left: 40px;
 }
 
-.project_skil {
-  color: var(--color-accent);
-  font-weight: 300;
+.project_item_type {
+  font-size: 13px;
+  font-family: "Pretendard";
+  color: #09d1d1;
+  background-color: #e7f9f9;
+  font-weight: 500;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-weight: 600;
 }
 
-.project_btn {
-  width: 170px;
-  border: 2px solid var(--color-accent);
-  background-color: var(--color-white);
-  margin: 2rem auto 0;
-  padding: 8px 0;
+.project_item_title {
+  font-family: "Pretendard";
+  font-size: 22px;
+  font-weight: 600;
+  color: #232323;
+  margin: 1rem 0 0.7rem;
+}
+
+.project_item_description {
+  font-family: "Pretendard";
+  font-size: 18px;
+  font-weight: 400;
+  color: #878787;
+  text-align: left;
+  font-size: 16px;
+}
+
+/* .project_item:nth-child(2) .project_item_description {
+  text-align: right;
+} */
+
+.project_item_btn,
+.project_item_link {
+  font-family: "Pretendard";
+  font-size: 16px;
+  font-weight: 700;
+  color: #fdfdfd;
+  background-color: #232323;
+  padding: 8px 20px;
+  border-radius: 2rem;
+  border: 1px solid #232323;
+  margin-top: 2rem;
   transition: all 150ms ease-in-out;
 }
 
-.project_btn:hover {
-  color: var(--color-white);
-  background-color: var(--color-accent);
+.project_item_link {
+  background-color: transparent;
+  color: #2c2c2c;
+  border-color: #2c2c2c;
+}
+
+.project_item_btn {
+  margin-right: 15px;
+}
+
+.project_img-box {
+  position: relative;
+  width: 60%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 85% 0% 100% 0% / 100% 100% 0% 100%;
+}
+
+.project_item:nth-child(2) .project_img-box {
+  border-radius: 0% 85% 100% 0% / 100% 100% 0% 100%;
+}
+
+.project_img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 /* Contact */
 #contact {
   width: 100%;
   height: 100%;
-  padding: 4rem 0 4rem;
+  padding: 2rem 0 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -865,7 +874,7 @@ button {
 .modal_close-btn {
   position: absolute;
   top: 10px;
-  left: 10px;
+  right: 10px;
   width: 30px;
   height: 30px;
   line-height: 30px;

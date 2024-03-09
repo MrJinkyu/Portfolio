@@ -1,5 +1,5 @@
 "use strict";
-const projectBtns = document.querySelectorAll(".project_btn");
+const projectBtns = document.querySelectorAll(".project_item_btn");
 const modalWrap = document.querySelector(".modal-wrap");
 const modal = document.querySelector(".modal");
 const closeBtn = document.querySelector(".modal_close-btn");

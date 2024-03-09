@@ -162,13 +162,14 @@
       <section id="skills">
         <article class="skills-left">
           <h2 class="skills_title">
-            제 <em>기술</em><br />💻 <em>스택</em>은<span>,</span>
+            제 <em>기술</em><br /><span class="skills_title_icon">💻</span>
+            <em>스택</em>은<span>,</span>
           </h2>
           <div class="skills_description">
             <p>
-              현재 주력 스택은 Javascript와 React.js이며<br />Typescript 심화
-              개념들을 학습중입니다.<br />더불어 Tailwind CSS와
-              Styled-components를<br />활용한 프로젝트에 참여 경험이 있습니다.
+              현재 주력 스택은 Javascript 와 React.js 이며<br />Typescript 심화
+              개념들을 학습 중입니다.<br />더불어 Tailwind CSS와
+              Styled-components<br />를 MBTI 테스트 프로젝트에 적용해보았습니다.
             </p>
           </div>
           <a
@@ -210,21 +211,124 @@
         <div class="skills-arrow"><i class="fa-solid fa-arrow-down"></i></div>
       </section>
       <section id="projects">
-        <h2 class="projects-title">
+        <h2 class="projects_title">
           아래의 작업들로<br />배우고 깨닫고 성장했습니다.
         </h2>
-        <div class="projects-description">
-          <p>이미지에 마우스를 올리면 프로젝트 정보를 확인할 수 있습니다.</p>
+        <div class="projects_description">
+          <p>썸네일을 클릭하면 배포 사이트로 이동하실 수 있습니다.</p>
         </div>
-        <div class="filters-wrap">
+        <div class="project_list">
+          <article class="project_item">
+            <div class="project_metadata">
+              <p class="project_item_type">개인 프로젝트</p>
+              <h3 class="project_item_title">삼성전자 웹 페이지</h3>
+              <p class="project_item_description">
+                삼성전자를 소개하고 당사 제품을 판매하는<br />통합형 웹
+                페이지입니다. 상품의 구매과정을 실제와<br />흡사하게 구현하여
+                사용자의 멘탈 모델에 부합하는<br />전자상거래 경험을 제공하기
+                위한 목적 하에 설계하였습니다.
+              </p>
+              <div>
+                <button class="project_item_btn" data-title="samsung">
+                  자세히 보기
+                </button>
+                <a
+                  href="https://github.com/MrJinkyu/Enterprise-Web-Page"
+                  target="_blank"
+                  class="project_item_link"
+                  >레파지토리 이동</a
+                >
+              </div>
+            </div>
+            <div class="project_img-box">
+              <a
+                href="https://teal-mandazi-2a1254.netlify.app/"
+                target="_blank"
+              >
+                <img
+                  class="project_img"
+                  src="/images/samsung_thumbnail.png"
+                  alt="samsung_thumbnail"
+                />
+              </a>
+            </div>
+          </article>
+          <article class="project_item">
+            <div class="project_metadata">
+              <p class="project_item_type">개인 프로젝트</p>
+              <h3 class="project_item_title">OTT 웹 페이지</h3>
+              <p class="project_item_description">
+                Youtube open API 를 적용하여 구현한 OTT 사이트입<br />니다.
+                사이드 바로 카테고리를 분류하고, 프리뷰를 통해 사<br />
+                용자가 원하는 영상을 직접 선택하고 시청할 수 있게끔 설<br />
+                계하였습니다.
+              </p>
+              <div>
+                <button class="project_item_btn" data-title="ott">
+                  자세히 보기
+                </button>
+                <a
+                  href="https://github.com/MrJinkyu/OTT-site"
+                  target="_blank"
+                  class="project_item_link"
+                  >레파지토리 이동</a
+                >
+              </div>
+            </div>
+            <div class="project_img-box">
+              <a
+                href="https://transcendent-cendol-7bbbaa.netlify.app"
+                target="_blank"
+              >
+                <img
+                  class="project_img"
+                  src="/images/ott_thumbnail.png"
+                  alt="ott_thumbnail"
+                />
+              </a>
+            </div>
+          </article>
+          <article class="project_item">
+            <div class="project_metadata">
+              <p class="project_item_type">팀 프로젝트</p>
+              <h3 class="project_item_title">MBTI 성향 테스트 페이지</h3>
+              <p class="project_item_description">
+                사용자들이 자신의 성격 유형을 이해하고, 타 유형에<br />속한
+                사람들과 활발한 상호작용을 통해 서로 간의 이해를<br />높일 수
+                있는 기회를 제공하고자 만들어진 서비스입니다.
+              </p>
+              <div>
+                <button class="project_item_btn" data-title="mbti">
+                  자세히 보기
+                </button>
+                <a
+                  href="https://github.com/are-you-T/client"
+                  target="_blank"
+                  class="project_item_link"
+                  >레파지토리 이동</a
+                >
+              </div>
+            </div>
+            <div class="project_img-box">
+              <a href="https://are-you-t.vercel.app/" target="_blank">
+                <img
+                  class="project_img"
+                  src="/images/mbti_thumbnail.png"
+                  alt="mbti_thumbnail"
+                />
+              </a>
+            </div>
+          </article>
+        </div>
+        <!-- <div class="filters-wrap">
           <ul class="project_filters">
             <li class="filter_item selected" data-filter="all">All</li>
             <li class="filter_item" data-filter="personal">Personal</li>
             <li class="filter_item" data-filter="team">Team</li>
           </ul>
           <div class="selected-bar"></div>
-        </div>
-        <ul class="project_list">
+        </div> -->
+        <!-- <ul class="project_list">
           <li class="project_item" data-category="personal">
             <img class="project_img" src="/images/samsung.png" alt="project1" />
             <div class="project_metadata">
@@ -251,7 +355,7 @@
               <button class="project_btn" data-title="mbti">더 알아보기</button>
             </div>
           </li>
-        </ul>
+        </ul> -->
       </section>
     </main>
     <div class="modal-wrap">
