@@ -649,7 +649,6 @@ button {
   font-weight: 700;
   font-family: "Pretendard";
   color: #414141;
-  margin-bottom: 1rem;
 }
 
 .projects_description {
@@ -657,6 +656,7 @@ button {
   font-weight: 400;
   color: #6d6d6d;
   font-family: "Pretendard";
+  margin: 1rem 0;
 }
 
 .project_list {
@@ -669,7 +669,7 @@ button {
   width: 1028px;
   height: 330px;
   display: flex;
-  margin: 3rem 0;
+  margin: 3.5rem 0;
 }
 
 .project_item:nth-child(2) {
@@ -688,7 +688,7 @@ button {
 }
 
 .project_item:nth-child(2) .project_metadata {
-  padding-left: 40px;
+  padding-left: 50px;
 }
 
 .project_item_type {
